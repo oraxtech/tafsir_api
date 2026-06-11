@@ -1,0 +1,18 @@
+name: Security
+# This tiny caller goes in EVERY repo at .github/workflows/security.yml
+# It runs on every branch push and every PR, and delegates to the central
+# reusable workflow so detection logic stays in one place.
+#
+# >>> Replace YOUR-ORG with your real org login before distributing. <<<
+
+on:
+  push:                # every branch (no filter)
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    uses: YOUR-ORG/.github/.github/workflows/reusable-security.yml@main
+    # secrets: inherit   # uncomment only if the reusable workflow needs secrets
