@@ -14,5 +14,5 @@ permissions:
 
 jobs:
   scan:
-    uses: YOUR-ORG/.github/.github/workflows/reusable-security.yml@main
+    uses: oraxtech/.github/.github/workflows/reusable-security.yml@main
     # secrets: inherit   # uncomment only if the reusable workflow needs secrets
